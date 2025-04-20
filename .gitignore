@@ -10,6 +10,8 @@ GUI_GSEv2/windows-amd64/java/lib/modules
 # Ignore all files larger than 100MB as a precaution
 # (you'll need to manage these with Git LFS or exclude them)
 GUI_GSEv2/windows-amd64/
+GUI_GSEv2/windows-amd64/**
+GUI_GSEv2/*.zip
 
 # Java related
 **/java/lib/modules
