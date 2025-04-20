@@ -7,10 +7,14 @@ GUI_GSEv2/windows-amd64.zip
 GUI_GSEv2/windows-amd64/java/lib/modules
 
 # General rules for large files
-# Ignore all files larger than 100MB as a precaution
-# (you'll need to manage these with Git LFS or exclude them)
 GUI_GSEv2/windows-amd64/
 GUI_GSEv2/windows-amd64/**
 GUI_GSEv2/*.zip
 
+
+
+# Additional large files to ignore
+GUI_GSEv2/data/flight_data_*.csv
+GUI_GSEv2/windows-amd64/data/rocket.obj
+*.obj
 
