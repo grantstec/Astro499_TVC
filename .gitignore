@@ -13,5 +13,4 @@ GUI_GSEv2/windows-amd64/
 GUI_GSEv2/windows-amd64/**
 GUI_GSEv2/*.zip
 
-# Java related
-**/java/lib/modules
+
