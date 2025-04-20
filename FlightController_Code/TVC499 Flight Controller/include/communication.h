@@ -24,10 +24,9 @@
 /**
  * @brief Initialize LoRa communication and Serial interface
  * @param rf95 Pointer to RF95 LoRa radio object
- * @param lastTelemetryTime Pointer to last telemetry time
  * @return True if initialization successful, false otherwise
  */
-bool initializeCommunication(RH_RF95* rf95, unsigned long* lastTelemetryTime);
+bool initializeCommunication(RH_RF95* rf95);
 
 /**
  * @brief Check for incoming LoRa commands
@@ -45,13 +44,14 @@ void checkForCommands(RH_RF95* rf95, String* command);
 void readSerial(String* command, bool* separationTriggered, bool* launchTriggered);
 
 /**
- * @brief Send telemetry data over LoRa
+ * @brief Send telemetry data over LoRa (non-blocking)
  * @param rf95 Pointer to RF95 LoRa radio object
  * @param quatAngles Array of quaternion angles [yaw,pitch,roll]
  * @param altData Array of altitude data [altitude,pressure,temp]
- * @param yawServo Pointer to yaw servo object
- * @param pitchServo Pointer to pitch servo object
+ * @param pitchServoAngle Pitch servo angle
+ * @param yawServoAngle Yaw servo angle
+ * @return True if packet was queued successfully, false otherwise
  */
-void sendData(RH_RF95* rf95, double quatAngles[3], double altData[3], PWMServo* yawServo, PWMServo* pitchServo);
+bool sendData(RH_RF95* rf95, double quatAngles[3], double altData[3], double pitchServoAngle, double yawServoAngle);
 
 #endif // COMMUNICATION_H
