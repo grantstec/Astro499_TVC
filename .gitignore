@@ -1,2 +1,15 @@
 # Ignore image zip files
 *.zip
+
+# Specific large files causing issues
+GUI_GSEv2/windows-amd64 (2).zip
+GUI_GSEv2/windows-amd64.zip
+GUI_GSEv2/windows-amd64/java/lib/modules
+
+# General rules for large files
+# Ignore all files larger than 100MB as a precaution
+# (you'll need to manage these with Git LFS or exclude them)
+GUI_GSEv2/windows-amd64/
+
+# Java related
+**/java/lib/modules
